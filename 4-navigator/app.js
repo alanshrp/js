@@ -7,4 +7,4 @@ const positionLong = 5;
 
 // Расстояние от позиции до адреса
 
-console.log(((adressLong - positionLong)**2+(adressLat - positionLat)**2)**0.5);
+console.log(Math.sqrt((adressLong - positionLong)**2+(adressLat - positionLat)**2));
