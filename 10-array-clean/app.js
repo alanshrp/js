@@ -21,14 +21,14 @@ function deleteEl(num) {
 }
 
 function editArr(arr, fn) {
+    let newArr = [];
     for (let i = 0; i < arr.length; i++) {
-        if (fn(arr[i])) {
-            arr.splice(i, 1);
-            i--;
+        if (fn(arr[i]) === false) {
+            newArr.push(arr[i]);
         }
     }
-    return arr;
+    return newArr;
 }
 
-editArr(arr, deleteEl);
-console.log(arr);
+let filteredArr = editArr(arr, deleteEl);
+console.log(filteredArr);
